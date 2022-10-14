@@ -8,6 +8,8 @@ RUN apk add bash
 RUN git clone https://github.com/tfutils/tfenv.git ~/.tfenv
 RUN git clone https://github.com/cunymatthieu/tgenv.git ~/.tgenv
 
+ENV TGENV_AUTO_INSTALL=true
+
 RUN ln -s ~/.tgenv/bin/* /usr/local/bin
 RUN ln -s ~/.tfenv/bin/* /usr/local/bin
 
