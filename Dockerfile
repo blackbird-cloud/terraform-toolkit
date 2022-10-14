@@ -4,6 +4,7 @@ RUN apk update
 RUN apk add curl
 RUN apk add git
 RUN apk add bash
+RUN apk add jq
 
 RUN git clone https://github.com/tfutils/tfenv.git ~/.tfenv
 RUN git clone https://github.com/cunymatthieu/tgenv.git ~/.tgenv
