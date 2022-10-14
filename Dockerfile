@@ -12,4 +12,4 @@ RUN ln -s ~/.tgenv/bin/* /usr/local/bin
 RUN ln -s ~/.tfenv/bin/* /usr/local/bin
 
 RUN /usr/local/bin/tfenv install latest
-RUN /usr/local/bin/tfenv install latest
+RUN /usr/local/bin/tgenv install latest
