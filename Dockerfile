@@ -14,5 +14,7 @@ ENV TGENV_AUTO_INSTALL=true
 RUN ln -s ~/.tgenv/bin/* /usr/local/bin
 RUN ln -s ~/.tfenv/bin/* /usr/local/bin
 
+RUN echo -e 'PATH="/root/.tgenv/bin:/root/.tfenv/bin:$PATH"' >> ~/.env
+
 RUN /usr/local/bin/tfenv install latest
 RUN /usr/local/bin/tgenv install latest
