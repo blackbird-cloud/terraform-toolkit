@@ -1,4 +1,4 @@
-FROM alpine:3.16.2
+FROM alpine:3.16.3
 
 RUN apk update
 RUN apk add curl
@@ -17,4 +17,6 @@ RUN ln -s ~/.tfenv/bin/* /usr/local/bin
 RUN echo -e 'PATH="/root/.tgenv/bin:/root/.tfenv/bin:$PATH"' >> ~/.env
 
 RUN /usr/local/bin/tfenv install latest
+RUN /usr/local/bin/tfenv install 1.1.9
 RUN /usr/local/bin/tgenv install latest
+RUN /usr/local/bin/tgenv install 0.38.9
