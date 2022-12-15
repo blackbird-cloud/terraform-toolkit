@@ -1,10 +1,11 @@
-FROM alpine:3.16.3
+FROM alpine:3.17.0
 
 RUN apk update
-RUN apk add curl
-RUN apk add git
-RUN apk add bash
-RUN apk add jq
+RUN apk add --no-cache curl git bash jq python3 py3-pip
+RUN pip3 install --upgrade pip \
+    && pip3 install --no-cache-dir \
+    awscli \
+    && rm -rf /var/cache/apk/*
 
 RUN git clone https://github.com/tfutils/tfenv.git ~/.tfenv
 RUN git clone https://github.com/cunymatthieu/tgenv.git ~/.tgenv
@@ -18,5 +19,6 @@ RUN echo -e 'PATH="/root/.tgenv/bin:/root/.tfenv/bin:$PATH"' >> ~/.env
 
 RUN /usr/local/bin/tfenv install latest
 RUN /usr/local/bin/tfenv install 1.1.9
+RUN /usr/local/bin/tfenv install 1.3.5
 RUN /usr/local/bin/tgenv install latest
 RUN /usr/local/bin/tgenv install 0.38.9
