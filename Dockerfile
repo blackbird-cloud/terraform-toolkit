@@ -16,8 +16,7 @@ ENV TGENV_AUTO_INSTALL=true
 
 RUN ln -s ~/.tgenv/bin/* /usr/local/bin
 RUN ln -s ~/.tfenv/bin/* /usr/local/bin
-
-RUN echo -e 'PATH="/root/.tgenv/bin:/root/.tfenv/bin:$PATH"' >> ~/.env
+RUN ln -s ~/gcloud/google-cloud-sdk/bin/* /usr/local/bin
 
 ENV PATH $PATH:~/gcloud/google-cloud-sdk/bin
 RUN /usr/local/bin/tfenv install latest
