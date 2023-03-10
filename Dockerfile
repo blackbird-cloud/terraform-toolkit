@@ -19,6 +19,7 @@ RUN ln -s ~/.tfenv/bin/* /usr/local/bin
 
 RUN echo -e 'PATH="/root/.tgenv/bin:/root/.tfenv/bin:$PATH"' >> ~/.env
 
+ENV PATH $PATH:~/gcloud/google-cloud-sdk/bin
 RUN /usr/local/bin/tfenv install latest
 RUN /usr/local/bin/tfenv install 1.1.9
 RUN /usr/local/bin/tfenv install 1.3.5
