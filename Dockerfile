@@ -22,5 +22,6 @@ ENV PATH $PATH:~/gcloud/google-cloud-sdk/bin
 RUN /usr/local/bin/tfenv install latest
 RUN /usr/local/bin/tfenv install 1.1.9
 RUN /usr/local/bin/tfenv install 1.3.5
+RUN /usr/local/bin/tfenv install 1.4.6
 RUN /usr/local/bin/tgenv install latest
 RUN /usr/local/bin/tgenv install 0.38.9
