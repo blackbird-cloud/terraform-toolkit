@@ -29,5 +29,5 @@ RUN /usr/local/bin/tgenv install latest
 
 RUN pip install azure-cli
 
-RUN curl -L curl -LO https://github.com/getsops/sops/releases/download/v3.8.1/sops-v3.8.1.linux.amd64 -o /usr/local/bin/sops
+RUN curl -L https://github.com/getsops/sops/releases/download/v3.8.1/sops-v3.8.1.linux.amd64 -o /usr/local/bin/sops
 RUN chmod +x /usr/local/bin/sops
