@@ -1,7 +1,7 @@
 FROM alpine:3.17.2
 
 RUN apk update && apk upgrade
-RUN apk add --no-cache curl git bash jq yq python3 py3-pip aws-cli
+RUN apk add --no-cache curl git bash jq yq python3-dev py3-pip aws-cli gcc musl-dev linux-headers libffi-dev
 RUN pip3 install --upgrade pip 
 RUN rm -rf /var/cache/apk/*
 
@@ -26,4 +26,6 @@ RUN /usr/local/bin/tfenv install 1.1.9
 RUN /usr/local/bin/tfenv install 1.3.5
 RUN /usr/local/bin/tfenv install 1.4.6
 RUN /usr/local/bin/tgenv install latest
+
+RUN pip install azure-cli
 
