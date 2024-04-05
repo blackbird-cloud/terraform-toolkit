@@ -25,6 +25,7 @@ RUN /usr/local/bin/tfenv install latest
 RUN /usr/local/bin/tfenv install 1.1.9
 RUN /usr/local/bin/tfenv install 1.3.5
 RUN /usr/local/bin/tfenv install 1.4.6
+RUN /usr/local/bin/tgenv install 0.54.22
 RUN /usr/local/bin/tgenv install latest
 
 RUN pip install azure-cli
